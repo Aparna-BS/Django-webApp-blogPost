@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block head_title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+  	<div class='container-fluid'>
+    <!-- INCLUDE WITH ARGUMENTS
+    <div class='container'>
+  		<div clss='row'>
+  			<div class='col-8 mx-auto'>
+    -->
+    			<!-- SUBMIT RAW HTML FORM
+          <h1>{{ title }}</h1>
+          -->
+    			{% block content %}
+    			
+    			{% endblock %}
+    		</div>
+    	</div>
+    </div>
+    {% include 'js.html' %}
+  </body>
+</html>

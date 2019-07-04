@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- INCLUDE WITH ARGUMENTS
+{{ title }}
+{{ user }}
+{{ user.is_authenticated }}
+{{ request.user }}
+{{ request.path }}
+{% comment %}
+{% if user.is_authenticated %}
+	<h4> User Only Data </h4>
+	{% for a in my_list %}
+		<li>{{ a }}</li>
+	{% endfor %}
+{% endif %}
+{% endcomment %}
+
+{% for a in my_list %}
+	<li>{{ a }}</li>
+{% endfor %}
+-->
+{% for a in blog_list %}
+	{% include 'blog/list-inline.html' with blog_post=a truncate=True detail=False %}
+{% endfor %}
+
+{%endblock %}
