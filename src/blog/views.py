@@ -80,7 +80,7 @@ def blog_post_update_view(request, slug):
     if form.is_valid():
         form.save()
     template_name = 'form.html'
-    context = {'form': form, "title": f"Update {obj.title}"}
+    context = {'form': form, "title": "Update {title}".format(obj.title)}
     return render(request, template_name, context)  
 
 @staff_member_required
